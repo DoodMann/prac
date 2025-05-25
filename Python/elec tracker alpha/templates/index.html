@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Electricity Bill Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+    <h2>Electricity Bill Calculator</h2>
+    <form method="POST">
+        <label>Previous Reading:</label>
+        <input type="number" step="any" name="prev_reading" required>
+        <br><br>
+        <label>Current Reading:</label>
+        <input type="number" step="any" name="curr_reading" required>
+        <br><br>
+        <label>Cost per kWh:</label>
+        <input type="number" step="any" name="cost_per_kwh" required>
+        <br><br>
+        <button type="submit">Calculate</button>
+    </form>
+
+    {% if total_cost is not none %}
+        <h3>Total Cost: {{ total_cost }} PHP</h3>
+    {% endif %}
+</body>
+</html>
