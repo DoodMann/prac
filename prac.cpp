@@ -29,7 +29,10 @@ int main() {
   } else {
     cout << "Eligible to vote? Yes, and you can also drink alcohol." << endl; 
     }
-  }
+
   
+
+  cout << "Thank you for your input!" << endl;
+}
 
 
