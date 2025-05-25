@@ -1,0 +1,122 @@
+<MedForm>:
+    orientation: "vertical"
+    spacing: 20
+    padding: 40
+
+    Label:
+        text: " Medication Tracker"
+        font_size: "24sp"
+        bold: True
+        halign: "center"
+        size_hint_y: None
+        height: self.texture_size[1]
+
+    BoxLayout:
+        orientation: "vertical"
+        spacing: 10
+        size_hint: None, None
+        size: 400, self.minimum_height
+        pos_hint: {"center_x": 0.5}
+
+        TextInput:
+            id: med_name_input
+            hint_text: "Medication Name"
+            text: root.med_name
+            on_text: root.med_name = self.text
+            multiline: False
+            size_hint_y: None
+            height: "40dp"
+            padding: 10
+            background_normal: ''
+            background_color: .95, .95, .95, 1
+            foreground_color: 0, 0, 0, 1
+
+        TextInput:
+            id: dosage_input
+            hint_text: "Dosage (e.g. 500mg)"
+            text: root.dosage
+            on_text: root.dosage = self.text
+            multiline: False
+            size_hint_y: None
+            height: "40dp"
+            padding: 10
+            background_normal: ''
+            background_color: .95, .95, .95, 1
+            foreground_color: 0, 0, 0, 1
+
+        TextInput:
+            id: med_time_input
+            hint_text: "Time (HH:MM)"
+            text: root.med_time
+            on_text: root.med_time = self.text
+            multiline: False
+            size_hint_y: None
+            height: "40dp"
+            padding: 10
+            background_normal: ''
+            background_color: .95, .95, .95, 1
+            foreground_color: 0, 0, 0, 1
+
+        Button:
+            text: "Add Medication"
+            size_hint_y: None
+            height: "40dp"
+            on_release: root.add_medication()
+            background_color: 0.2, 0.6, 0.8, 1
+            color: 1, 1, 1, 1
+
+    BoxLayout:
+        orientation: "horizontal"
+        spacing: 10
+        size_hint_y: None
+        height: "40dp"
+
+        Button:
+            text: "Add Stock"
+            on_release: root.add_stock()
+            background_color: 0.3, 0.7, 0.3, 1
+            color: 1, 1, 1, 1
+
+        Button:
+            text: "Deduct Stock"
+            on_release: root.deduct_stock()
+            background_color: 0.8, 0.3, 0.3, 1
+            color: 1, 1, 1, 1
+
+
+    Label:
+        text: "Medications"
+        font_size: "18sp"
+        size_hint_y: None
+        height: "30dp"
+        color: 0.2, 0.2, 0.2, 1
+
+    RecycleView:
+        id: meds_view
+        size_hint_y: 1
+        viewclass: "MedicationRow"
+        RecycleBoxLayout:
+            orientation: "vertical"
+            default_size: None, 40
+            default_size_hint: 1, None
+            size_hint_y: None
+            height: self.minimum_height
+
+<MedicationRow@BoxLayout>:
+    name: ''
+    dosage: ''
+    med_time: ''
+    stock: 0
+    orientation: "horizontal"
+    spacing: 10
+    size_hint_y: None
+    height: "30dp"
+
+    Label:
+        text: root.name
+    Label:
+        text: root.dosage
+    Label:
+        text: root.med_time
+    Label:
+        text: str(root.stock)

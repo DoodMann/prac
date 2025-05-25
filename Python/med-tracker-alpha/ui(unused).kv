@@ -1,0 +1,47 @@
+# ui.kv
+<MedForm>:
+    orientation: "vertical"
+    padding: 20
+    spacing: 10
+
+    AnchorLayout:
+        size_hint_y: None
+        height: "40dp"
+        anchor_x: "center"
+        anchor_y: "center"
+    
+    
+        TextInput:
+            id: med_name_input
+            hint_text: "Medication name"
+            text: root.med_name
+            on_text: root.med_name = self.text
+            multiline: False
+            write_tab: False
+            size_hint_x: None
+            width: "150dp"
+            size_hint_y: None
+            height: "30dp"
+            font_size: "17sp"
+
+    TextInput:
+        id: dosage_input
+        hint_text: "Dosage (e.g., 500mg)"
+        text: root.dosage
+        on_text: root.dosage = self.text
+        multiline: False
+        write_tab: False
+
+    TextInput:
+        id: med_time_input
+        hint_text: "Time (HH:MM)"
+        text: root.med_time
+        on_text: root.med_time = self.text
+        multiline: False
+        write_tab: False
+
+    Button:
+        text: "Add Medication"
+        size_hint_y: None
+        height: 50
+        on_press: root.add_medication()
