@@ -1,6 +1,6 @@
-# Learning Python and C++
+# Learning the fundamentals of major languages! 
 
-This repository contains all the code I've written as part of my journey to learn **Python** and **C++**. Everything here reflects what I've done to explore, experiment, and understand both languages more deeply.
+This repository contains all the code I've written as part of my journey to learn **major languages** (i.e. **Python**, **C++**, **HTML + CSS**). Everything here reflects what I've done to explore, experiment, and understand both languages more deeply.
 
 ## Motivation
 
@@ -13,11 +13,13 @@ Throughout this journey, I’ve used the following tools and platforms to help m
 - 📺 **YouTube** – for tutorials, walkthroughs, and hands-on guides.
 - 🧠 **ChatGPT** – for explanations, code reviews, and problem-solving help.
 - 💻 **Visual Studio Code (VSCode) with GitHub Copilot** – for writing, testing, and exploring code with AI-assisted suggestions.
+- 🖥️ **[WS3 Schools!](https://www.w3schools.com/)** - A BIG help! Contains an online compiler so I didn't have to boot back and forth within Fedora and Windows.
 
 ## What's Inside
 
 - 🐍 Python scripts and projects covering basic to intermediate topics.
 - 💠 C++ code samples, exercises, and mini-projects.
+- 🖥️ And now HTML + CSS! I want to learn basic formatting, then move to JS.
 - Notes, test files, and any other experimental code I've worked on.
 
 ## Disclaimer
