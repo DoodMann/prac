@@ -1,69 +1,85 @@
 body {
-  background-color: rgb(66, 2, 2);
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #232526 0%, #414345 100%);
+  color: #f5f5f5;
+  margin: 0;
+  min-height: 100vh;
 }
 
-img {
-  width: 350px;
-  border-radius: 220px;
-  float: left;
-  margin-right: 10px;
+.portfolio-card {
+  background: rgba(35, 37, 38, 0.95);
+  max-width: 420px;
+  margin: 60px auto 0 auto;
+  padding: 2.5rem 2rem 2rem 2rem;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.22);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-p {
-  text-align: left;
-  color: white;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+.profile-img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
 }
 
-.username {
-  text-align: center;
-  color: white;
-  font-weight: bold;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+section {
+  width: 100%;
+  margin-top: 1.5rem;
 }
 
-.name {
-  text-align: center;
-  color: white;
-  font-weight: bold;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+section h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.15rem;
+  color: #6a11cb;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
-.dropdown {
-  position: relative;
-  display: inline-block;
+.projects ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.dropbtn {
-  background-color: rgb(66, 2, 2);
-  color: white;
-  padding: 10px 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-  border-radius: 4px;
+.projects li {
+  margin-bottom: 0.5rem;
 }
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: white;
-  box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
-  min-width: 160px;
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: rgb(255, 255, 255);
-  padding: 10px 12px;
+.projects a {
+  color: #2575fc;
   text-decoration: none;
-  display: block;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: rgb(70, 67, 67);
-  
+  font-weight: 500;
+  transition: color 0.2s;
 }
 
-.dropdown:hover .dropdown-content {
-  display: block;
+.projects a:hover {
+  color: #6a11cb;
+  text-decoration: underline;
 }
 
+.contact a {
+  color: #bdbdbd;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.contact a:hover {
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .portfolio-card {
+    max-width: 98vw;
+    padding: 1.2rem 0.5rem;
+  }
+  .profile-img {
+    width: 100px;
+    height: 100px;
+  }
+}
